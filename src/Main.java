@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         AudioFile af1 = new AudioFile("main1.mp3", "Drake", "God's plan", 243, 2023);
