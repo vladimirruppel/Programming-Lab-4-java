@@ -7,6 +7,8 @@ public class AudioFile {
 	private int duration;
 	private int releaseYear;
 
+	private static int totalAudioFiles = 0; // общее количество созданных аудиофайлов
+
 	// конструктор
 	public AudioFile(String fileName, String artistName, String trackName, int duration, int releaseYear) {
 		this.fileName = fileName;
@@ -14,6 +16,8 @@ public class AudioFile {
 		this.trackName = trackName;
 		this.duration = duration;
 		this.releaseYear = releaseYear;
+
+		totalAudioFiles++;
 	}
 
 	// сеттеры
@@ -59,6 +63,10 @@ public class AudioFile {
 	}
 
 	// методы
+	public static int getTotalAudioFiles() {
+		return totalAudioFiles;
+	}
+
 	public void PrintInfo() {
 		PrintInfoLong();
 	}

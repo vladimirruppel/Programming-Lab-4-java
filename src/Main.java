@@ -6,6 +6,18 @@ public class Main {
         Playlist pl = new Playlist("Крутой рэп из Америки", af1, af2);
         pl.PrintTrackList();
 
+        // обработка строк
+        if (af1.GetArtistName().equals("Drake")) {
+            System.out.println("Первый артист - всеми любимый Drake");
+        }
+        int index = af2.GetArtistName().indexOf("West");
+        System.out.println("Индекс подстроки 'West' - " + index);
+
+        String artistName = af2.GetArtistName();
+        String newArtistName = artistName.replace("West", "East");
+        System.out.println("Новое имя исполнителя - " + newArtistName);
+        // конец обработки строк
+
         AudioPlayer player = new AudioPlayer(pl);
         player.PrintInfo();
         player.Play();
@@ -22,5 +34,7 @@ public class Main {
         lib.CreatePlaylist();
         lib.PrintPlaylists();
         lib.CloseScanner();
+
+        System.out.println("Общее количество созданных треков: " + AudioFile.getTotalAudioFiles());
     }
 }
