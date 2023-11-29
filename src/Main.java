@@ -18,6 +18,12 @@ public class Main {
         System.out.println("Новое имя исполнителя - " + newArtistName);
         // конец обработки строк
 
+        // возврат целого числа из метода вспомогательного класса
+        AuditionsNumber an = new AuditionsNumber();
+        System.out.println("Количество прослушиваний: " + an.getCount());
+        an.addCount(2);
+        System.out.println("Количество прослушиваний: " + an.getCount());
+
         AudioPlayer player = new AudioPlayer(pl);
         player.PrintInfo();
         player.Play();
